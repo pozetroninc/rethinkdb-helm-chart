@@ -28,7 +28,7 @@ jobs:
         with:
           context: ./init/
           push: true
-          file: Dockerfile
+          file: ./init/Dockerfile
           build-args: |
             upstream_image=rethinkdb:${{ steps.rethinkdb.outputs.release }}
           tags: pozetroninc/rethinkdb-cluster:latest, pozetroninc/rethinkdb-cluster:${{ steps.rethinkdb.outputs.release }}
