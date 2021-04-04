@@ -34,7 +34,7 @@ The following table lists the configurable parameters of the rethinkdb chart and
 
 Parameter | Description | Default
 ---|---|---
-`image.name` | Custom RethinkDB image name for auto-joining and probe | `codylundquist/helm-rethinkdb-cluster`
+`image.name` | Custom RethinkDB image name for auto-joining and probe | `pozetroninc/rethinkdb-cluster`
 `image.tag` | Custom RethinkDB image tag | `0.1.0`
 `image.pullPolicy` | Custom RethinkDB image pull policy | `IfNotPresent`
 `cluster.replicas` | Number of RethinkDB Cluster replicas | `3`
