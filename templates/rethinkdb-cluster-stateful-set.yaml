@@ -29,6 +29,10 @@ spec:
 {{ toYaml .Values.cluster.podAnnotations | indent 8 }}
       {{- end }}
     spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       serviceAccountName: {{ template "rethinkdb.serviceAccountName" . }}
       containers:
         - name: {{ template "rethinkdb.name" . }}-cluster
@@ -70,7 +74,7 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
           livenessProbe:
-{{ toYaml .Values.cluster.livenessProbe | indent 12 }}          
+{{ toYaml .Values.cluster.livenessProbe | indent 12 }}
           readinessProbe:
 {{ toYaml .Values.cluster.readinessProbe | indent 12 }}
             exec:
