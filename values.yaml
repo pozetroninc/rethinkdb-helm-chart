@@ -4,6 +4,8 @@ image:
   tag: v2.4.1
   pullPolicy: IfNotPresent
 
+imagePullSecrets: []
+
 # RethinkDB Cluster Config
 cluster:
   replicas: 3
