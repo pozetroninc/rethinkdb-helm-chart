@@ -14,8 +14,6 @@ spec:
       app: {{ template "rethinkdb.name" . }}-proxy
       heritage: {{ .Release.Service | quote }}
       release: {{ .Release.Name | quote }}
-      chart: {{ template "rethinkdb.chart" . }}
-      # This is hardcoded to allow old Deployments to upgrade
       chart: "rethinkdb-1.1.5"
   template:
     metadata:
