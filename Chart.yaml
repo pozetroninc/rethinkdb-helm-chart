@@ -1,7 +1,7 @@
 apiVersion: v2
 name: rethinkdb
 description: The open-source database for the realtime web
-version: 1.1.6
+version: 1.1.7
 appVersion: 2.4.1
 keywords:
 - rethinkdb
