@@ -15,6 +15,8 @@ spec:
       app: "{{ template "rethinkdb.name" . }}-cluster"
       heritage: {{ .Release.Service | quote }}
       release: {{ .Release.Name | quote }}
+      # This is hardcoded to allow old StatefulSets to upgrade
+      chart: "rethinkdb-1.1.5"
   template:
     metadata:
       name: "{{ template "rethinkdb.fullname" . }}-cluster"
