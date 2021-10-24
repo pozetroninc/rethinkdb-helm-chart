@@ -22,7 +22,7 @@ spec:
         app: {{ template "rethinkdb.name" . }}-proxy
         heritage: {{ .Release.Service | quote }}
         release: {{ .Release.Name | quote }}
-        chart: {{ template "rethinkdb.chart" . }}
+        chart: "rethinkdb-1.1.5"
       annotations:
       {{- if .Values.proxy.podAnnotations }}
 {{ toYaml .Values.proxy.podAnnotations | indent 8 }}

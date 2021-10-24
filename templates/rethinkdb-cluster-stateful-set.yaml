@@ -23,7 +23,7 @@ spec:
         app: "{{ template "rethinkdb.name" . }}-cluster"
         heritage: {{ .Release.Service | quote }}
         release: {{ .Release.Name | quote }}
-        chart: {{ template "rethinkdb.chart" . }}
+        chart: "rethinkdb-1.1.5"
       annotations:
       {{- if .Values.cluster.podAnnotations }}
 {{ toYaml .Values.cluster.podAnnotations | indent 8 }}
