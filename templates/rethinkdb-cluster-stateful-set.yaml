@@ -15,7 +15,6 @@ spec:
       app: "{{ template "rethinkdb.name" . }}-cluster"
       heritage: {{ .Release.Service | quote }}
       release: {{ .Release.Name | quote }}
-      chart: {{ template "rethinkdb.chart" . }}
   template:
     metadata:
       name: "{{ template "rethinkdb.fullname" . }}-cluster"
