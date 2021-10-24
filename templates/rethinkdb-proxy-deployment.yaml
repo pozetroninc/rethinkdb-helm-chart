@@ -56,6 +56,10 @@ spec:
           volumeMounts:
             - name: "secrets"
               mountPath: "/secrets"
+          livenessProbe:
+{{ toYaml .Values.cluster.livenessProbe | indent 12 }}
+          readinessProbe:
+{{ toYaml .Values.cluster.readinessProbe | indent 12 }}
           env:
             - name: PROXY
               value: "true"
