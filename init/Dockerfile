@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Versions
-ARG UPSTREAM_IMAGE=rethinkdb:2.4.1
+ARG UPSTREAM_IMAGE=rethinkdb:2.4.2
 
 FROM golang:1.16 AS builder
 
